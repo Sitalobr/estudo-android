@@ -5,3 +5,4 @@ App criado como parte do estudo de programação mobile android. Sorteia frases 
 ## Recursos utilizados:
 - Inserção de imagens;
 - Eventos de click;
+- Layout constraints.
