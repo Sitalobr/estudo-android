@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Ropasciliz-Spock</string>
+    <string name="apps_choice">App\'s choice</string>
+    <string name="choose_an_option">Choose one of the options below</string>
+    <string name="default_name">default</string>
+    <string name="rock">rock</string>
+    <string name="paper">paper</string>
+    <string name="scissors">scissors</string>
+    <string name="lizard">lizard</string>
+    <string name="spock">spock</string>
+    <string name="you_won">You won! :)</string>
+    <string name="you_lose">You lose! :(</string>
+    <string name="its_a_draw">It\'s a draw! :T</string>
 </resources>
