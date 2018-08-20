@@ -15,7 +15,15 @@ public enum Option {
         this.wins = wins;
     }
 
-    public Boolean wins(Option option) {
-        return Arrays.asList(this.wins).contains(option.name());
+    /**
+     * Checks the winner of a match
+     * @param otherOption Other {@link Option} to compare to
+     * @return Returns {@link ResultComparison}.LOSS in case that this {@link Option} loses,
+     * {@link ResultComparison}.DRAW if it's a draw and {@link ResultComparison}.WIN
+     * if this {@link Option} wins
+     */
+    public ResultComparison checkWinner(Option otherOption) {
+        return Arrays.asList(this.wins).contains(otherOption.name()) ? ResultComparison.WIN :
+                this.equals(otherOption) ? ResultComparison.DRAW : ResultComparison.LOSS;
     }
 }

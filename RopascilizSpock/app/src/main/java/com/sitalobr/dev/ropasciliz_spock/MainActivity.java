@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sitalobr.dev.ropasciliz_spock.entity.Option;
+import com.sitalobr.dev.ropasciliz_spock.entity.ResultComparison;
 import com.sitalobr.dev.ropasciliz_spock.service.GameService;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,11 +75,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setTextResult(Option userOption, Option appOption) {
-        this.txtResult.setText(userOption.wins(appOption) ? R.string.you_won :
-                userOption.equals(appOption) ? R.string.its_a_draw : R.string.you_lose);
-        this.txtResult.setTextColor(userOption.wins(appOption) ?
+        ResultComparison result = userOption.checkWinner(appOption);
+
+        this.txtResult.setText(result.equals(ResultComparison.WIN) ? R.string.you_won :
+                result.equals(ResultComparison.DRAW) ? R.string.its_a_draw : R.string.you_lose);
+        this.txtResult.setTextColor(result.equals(ResultComparison.WIN) ?
                 ContextCompat.getColor(this, R.color.colorSuccess) :
-                userOption.equals(appOption) ? ContextCompat.getColor(this, R.color.colorPrimary) :
+                result.equals(ResultComparison.DRAW) ? ContextCompat.getColor(this, R.color.colorPrimary) :
                         ContextCompat.getColor(this, R.color.colorDanger));
     }
 }
