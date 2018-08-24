@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AppNoticiasLayout</string>
+    <string name="description_news_img">News\' image</string>
+    <string name="next_button">Próximo</string>
+    <string name="previous_button">Anterior</string>
 </resources>
