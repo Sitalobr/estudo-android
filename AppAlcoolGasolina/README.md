@@ -5,4 +5,5 @@ App que calcula qual a melhor opção de abastecimento de um carro levando em co
 ## Recursos utilizados
 
 - Constraint layout;
-- Manipulação de cores.
+- Manipulação de cores;
+- Toast.

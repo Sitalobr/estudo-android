@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         if (this.validaCampos(precoAlcool, precoGasolina))
             this.calcularMelhorPreco(precoAlcool, precoGasolina);
         else
-            this.setResultado("Informe todos os campos corretamente...", R.color.colorDanger);
+            this.showToast("Informe todos os campos corretamente...", Toast.LENGTH_LONG);
     }
 
     private void calcularMelhorPreco(String precoAlcool, String precoGasolina) {
@@ -50,5 +51,9 @@ public class MainActivity extends AppCompatActivity {
     private void setResultado(String text, int color) {
         this.tvResultado.setTextColor(ContextCompat.getColor(this, color));
         this.tvResultado.setText(text);
+    }
+
+    private void showToast(String text, int duration) {
+        Toast.makeText(this, text, duration).show();
     }
 }
