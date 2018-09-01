@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppCalculadoraGorjeta</string>
+    <string name="bill_value_required">O preenchimento do valor da conta é obrigatório!</string>
+    <string name="percentage_value" formatted="true">%1$d%%</string>
+    <string name="result_monetary" formatted="true">%1$s %2$s</string>
+</resources>
