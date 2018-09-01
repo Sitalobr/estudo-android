@@ -5,6 +5,7 @@ App que utiliza o valor da conta informado pelo usuário e a porcentagem de gorg
 ## Recursos utilizados
 
 - Constraint layout;
-- Seekbar;
+- Seekbar onChangeListener;
 - Toast;
-- Recursos de string com placeholders.
+- Recursos de string com placeholders;
+- EditText onChangeListener.
